@@ -1,0 +1,397 @@
+html,body {
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+}
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.app{
+    background-image: url('./images/background.png');
+    background-size: cover;
+    color:white;
+    padding: 3rem 6rem 0 6rem;
+    position: relative;
+    min-height: 100vh;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+} 
+.calendar-div{
+    display: flex;
+}
+.header-div{
+    text-align: center;
+    line-height: 0.7rem;
+    margin-top: 5rem;
+}
+.header-div-mobile{
+    display: none;
+}
+.unlock-to{
+    font-weight: 300;
+    font-size: 4rem;
+    animation-name: slide-up-unlock-to;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
+.power-your{
+    font-weight: 700;
+    font-size: 4rem;
+    /*  */
+    animation-name: slide-up-unlock-to;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
+.stand-a-chance-div{
+    line-height: 0;
+}
+.stand-a{
+    font-size: 1.9rem;
+    font-weight: 300;
+    /*  */
+    animation-name: slide-up-unlock-to;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
+.everyday{
+    font-size: 1.9rem;
+    font-weight: 300;
+    /*  */
+    animation-name: slide-up-unlock-to;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
+.prize-amount{
+    font-weight: 900 !important;
+}
+
+.instruction-card{
+    width:30rem;
+    margin: auto;
+    padding:2rem;
+    font-weight: 300;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.39) -213.5%, rgba(255, 255, 255, 0) 100%);
+    box-shadow: inset 0px -1px 11px rgba(255, 255, 255, 0.17), inset 0px 2px 0px rgba(255, 255, 255, 0.24);
+    border-radius: 8px;
+    margin-bottom: 120px;
+    z-index: 3;
+    /*  */
+    animation-name: slide-up-unlock-to;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
+.how-to{
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.warning-card{
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    font-size: 12px;
+    display: flex;
+}
+.light-bulb{
+    font-size: 16px;
+    margin-right: 10px;
+    position: relative;
+    bottom: 8px;
+}
+.instructions-ol{
+    font-size: 14px;
+    padding-left: 1.2rem;
+}
+.sounds{
+    font-size: 14px;
+}
+
+.left-right-coins-div{
+    display: flex;
+    justify-content: space-between;
+    width:40rem;
+    margin: auto;
+    /*  */
+    animation-name: slide-up-unlock-to;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
+
+.left-right-coins-div-mobile{
+    display: none;
+}
+
+.beam-lights-div{
+    display: flex;
+}
+.coin-pot-div{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    /*  */
+    animation-name: slide-up-unlock-to;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
+.coin-pot-div-mobile{
+    display: none;
+}
+.coin-pot-img{
+    width: 50%;
+    z-index: 2;
+}
+.beam-1{
+    position: absolute;
+    bottom: 0;
+    left:-450px;
+    z-index: 1;
+    /*  */
+    animation-name: rotate-beam;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+.beam-2{
+    position: absolute;
+    bottom: 0;
+    left:100px;
+    z-index: 1;
+}
+.beam-3{
+    position: absolute;
+    bottom: 0;
+    left:550px;
+    z-index: 1;
+}
+.beam-4{
+    position: absolute;
+    bottom: 0;
+    left:600px;
+    z-index: 1;
+}
+.beam-5{
+    position: absolute;
+    bottom: 0;
+    left:700px;
+    z-index: 1;
+}
+.left-coin-div{
+    animation-name: bounce-left;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+.right-coin-div{
+    position: relative;
+    top:100px;
+    animation-name: bounce-right;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+.play-btn-div{
+    display: flex;
+    justify-content: center;
+}
+.play-btn{
+    border-radius: 4px;
+    background: #ECAB03;
+    border: none;
+    color:white;
+    padding:0.3rem 3rem;
+    position: fixed;
+    bottom: 30px;
+    z-index: 3;
+}
+
+.star{
+    position: absolute;
+}
+.green-star{
+    top:13%;
+    left:10%;
+}
+.yellow-star-1{
+    top:23%;
+    right:34%;
+}
+.yellow-star-2{
+    top:85%;
+    left:29%;
+}
+.white-star-1{
+    top:17%;
+    right:10%;
+}
+.white-star-2{
+    top:63%;
+    left: 28%;
+}
+
+@keyframes bounce-left {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(50px);}
+    100% {transform: translateY(0);}
+}
+
+@keyframes bounce-right {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(30px);}
+    100% {transform: translateY(0);}
+}
+
+@keyframes slide-up-unlock-to {
+    
+}
+
+@keyframes rotate-beam {
+    
+}
+
+
+@media only screen and (max-width: 600px) {
+    .app{
+        padding: 1rem;
+        min-height: 100vh;
+    }
+    .header-div{
+        display: none;
+    }
+    .header-div-mobile{
+        display: block;
+        text-align: center;
+        line-height: 10px;
+        margin-top: 3rem;
+    }
+
+
+    .header-div-mobile .power{
+        font-size: 2rem;
+    }
+    .unlock-to{
+        font-size: 2rem;
+    }
+    .power-your{
+        font-size: 2rem;
+    }
+    .power{
+        font-weight: 900;
+    }
+
+    .stand-a{
+        font-size: 1rem;
+        margin-top: 40px;
+    }
+    .everyday{
+        font-size: 1rem;
+    }
+
+
+    .instruction-card{
+        width:98%;
+        margin: auto;
+        margin-bottom: 180px;
+        padding:0.8rem;
+    }
+    .instructions-ol{
+        font-size: 12px;
+        padding-left: 1.2rem;
+    }
+    .sounds{
+        font-size: 12px;
+    }
+    .play-btn{
+        padding:3px 10px;
+        width:200px;
+    }
+
+    .left-right-coins-div{
+        display: none;
+    }
+
+    .left-right-coins-div-mobile{
+        display: block;
+        position: relative;
+    }
+
+    .left-coin-div-mobile{
+        position: absolute;
+        left:-60px;
+        bottom:30px;
+        /*  */
+        animation-name: bounce-left;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+    }
+
+    .right-coin-div-mobile{
+        position: absolute;
+        right:-85px;
+        bottom:-70px;
+        /*  */
+        animation-name: bounce-right;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+
+    .coin-pot-div{
+        display: none;
+    }
+    .coin-pot-div-mobile{
+        display: block;
+        /* position: relative;
+        bottom: 70px; */
+    }
+    
+    .coin-pot-img-mobile{
+        width: 100%;
+        z-index:2;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .beam-1{
+        position: absolute;
+        bottom: 0;
+        left:-600px;
+        z-index: 1;
+    }
+    .beam-2{
+        position: absolute;
+        bottom: 0;
+        left:-200px;
+        z-index: 1;
+    }
+    .beam-3{
+        position: absolute;
+        bottom: 0;
+        left:120px;
+        z-index: 1;
+    }
+    .beam-4{
+        position: absolute;
+        bottom: 0;
+        left:180px;
+        z-index: 1;
+    }
+    .beam-5{
+        position: absolute;
+        bottom: 0;
+        left:220px;
+        z-index: 1;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 500px) {
+    .play-btn{
+        bottom: 150px;
+    }
+}
